@@ -1,0 +1,76 @@
+* {
+ font-size: 100%;
+ font-family: 'Roboto', sans-serif;
+ /* font-weight: lighter; */
+}
+
+
+.ArtCard {
+  pointer-events: visibleFill;
+  width: 150px;
+  height: 225px;
+  padding-top: 5px;
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid transparent;
+  /* text-align: center; */
+}
+
+.ArtCard {
+  cursor: pointer;
+}
+
+a {
+  text-decoration:none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+
+.CardContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  width: 100px;
+  height: 250px;
+  display: block;
+  vertical-align: top;
+}
+
+.CardText {
+  font-size: 18px;
+  margin: auto;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  hyphens: auto;
+  height: 150px;
+}
+
+.CardTitle:hover {
+   text-decoration: underline;
+   color: inherit;
+}
+
+.ArtCard:hover {
+  /* box-shadow: 2px 2px 2px Grey; */
+  border: 1px solid #6C5A49;
+}
+
+.ArtistLink {
+  font-size: 12px;
+}
+
+.CardImage {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  padding-bottom: 5px;
+  display: block;
+  object-fit: cover;
+}

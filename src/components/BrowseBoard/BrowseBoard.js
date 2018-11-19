@@ -1,8 +1,9 @@
-import React from 'react';
-import ArtCard from '../ArtCard/ArtCard.js'
+import React, {Redirect} from 'react';
+import BrowseCard from '../BrowseCard/BrowseCard.js'
 import BrowseRow from '../BrowseRow/BrowseRow.js'
 import './BrowseBoard.css'
 import ArtModal from '../ArtModal/ArtModal'
+import {makeCategoryLink} from '../Functions/HelperFunctions.js'
 
 
 
@@ -11,25 +12,31 @@ class BrowseBoard extends React.Component {
     super(props);
     this.state = {
       ArtModalDisplay: false,
-      ArtModalArtObj: {
-        title: "Mona Lisa",
-        artist: 'Da Vinci',
-        id: '1',
-        artistId: '1',
-        imgSRC: "mona_lisa.jpg",
-        description: "A beautiful piece of art from a world-renowned artist that could be a great addition to any space, ranging from cafe to bank to michelin star restaurant"
-    }}
+      ArtModalcardObj: {}}
+    this.handleClickCatObj = this.handleClickCatObj.bind(this);
+    this.handleClickArtObj = this.handleClickArtObj.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   handleClick(obj) {
-      this.openModal(obj.props.artObj)
+    if (obj.props.cardObj.type === 'Art') {
+      this.handleClickArtObj(obj)
+    }
+    else {this.handleClickCatObj(obj)}
   }
 
-  openModal(artObj) {
-    this.setState({ArtModalArtObj: artObj})
+  handleClickArtObj(obj) {
+      this.openModal(obj.props.cardObj)
+  }
+
+  handleClickCatObj(obj) {
+    window.location.assign(makeCategoryLink(obj.props.cardObj.id));
+  }
+
+  openModal(cardObj) {
+    this.setState({ArtModalcardObj: cardObj})
     this.setState({ArtModalDisplay: true})
   }
 
@@ -40,11 +47,10 @@ class BrowseBoard extends React.Component {
   render() {
     return(
       <div class = "BrowseBoardContainer">
-        <BrowseRow artList = {this.props.artList} handleClick = {this.handleClick} RowColor = "inherit"/>
-        <BrowseRow artList = {this.props.artList} handleClick = {this.handleClick} RowColor =  "#F0EAD6"/>
-        <BrowseRow artList = {this.props.artList} handleClick = {this.handleClick} RowColor = "inherit"/>
-        <BrowseRow artList = {this.props.artList} handleClick = {this.handleClick} RowColor =  "#F0EAD6"/>
-        <ArtModal closeModal = {this.closeModal} display = {this.state.ArtModalDisplay} artObj = {this.state.ArtModalArtObj}/>
+      {this.props.sectionList.map(section => (
+        <BrowseRow cardList = {section.artList} sectionTitle = {section.title} handleClick = {this.handleClick} RowColor = {section.rowColor}/>
+        ))}
+        <ArtModal closeModal = {this.closeModal} display = {this.state.ArtModalDisplay} cardObj = {this.state.ArtModalcardObj}/>
       </div>
     )
   }

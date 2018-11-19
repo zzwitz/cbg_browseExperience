@@ -4371,7 +4371,7 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
-.card {
+.BrowseCard {
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -4385,86 +4385,86 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
-.card > hr {
+.BrowseCard > hr {
   margin-right: 0;
   margin-left: 0;
 }
 
-.card > .list-group:first-child .list-group-item:first-child {
+.BrowseCard > .list-group:first-child .list-group-item:first-child {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
 
-.card > .list-group:last-child .list-group-item:last-child {
+.BrowseCard > .list-group:last-child .list-group-item:last-child {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
 
-.card-body {
+.BrowseCard-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
 }
 
-.card-title {
+.BrowseCard-title {
   margin-bottom: 0.75rem;
 }
 
-.card-subtitle {
+.BrowseCard-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.BrowseCard-text:last-child {
   margin-bottom: 0;
 }
 
-.card-link:hover {
+.BrowseCard-link:hover {
   text-decoration: none;
 }
 
-.card-link + .card-link {
+.BrowseCard-link + .BrowseCard-link {
   margin-left: 1.25rem;
 }
 
-.card-header {
+.BrowseCard-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-header:first-child {
+.BrowseCard-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
-.card-header + .list-group .list-group-item:first-child {
+.BrowseCard-header + .list-group .list-group-item:first-child {
   border-top: 0;
 }
 
-.card-footer {
+.BrowseCard-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-footer:last-child {
+.BrowseCard-footer:last-child {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
 
-.card-header-tabs {
+.BrowseCard-header-tabs {
   margin-right: -0.625rem;
   margin-bottom: -0.75rem;
   margin-left: -0.625rem;
   border-bottom: 0;
 }
 
-.card-header-pills {
+.BrowseCard-header-pills {
   margin-right: -0.625rem;
   margin-left: -0.625rem;
 }
 
-.card-img-overlay {
+.BrowseCard-img-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -4473,42 +4473,42 @@ input[type="button"].btn-block {
   padding: 1.25rem;
 }
 
-.card-img {
+.BrowseCard-img {
   width: 100%;
   border-radius: calc(0.25rem - 1px);
 }
 
-.card-img-top {
+.BrowseCard-img-top {
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
-.card-img-bottom {
+.BrowseCard-img-bottom {
   width: 100%;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
-.card-deck {
+.BrowseCard-deck {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.card-deck .card {
+.BrowseCard-deck .BrowseCard {
   margin-bottom: 15px;
 }
 
 @media (min-width: 576px) {
-  .card-deck {
+  .BrowseCard-deck {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     margin-right: -15px;
     margin-left: -15px;
   }
-  .card-deck .card {
+  .BrowseCard-deck .BrowseCard {
     display: -ms-flexbox;
     display: flex;
     -ms-flex: 1 0 0%;
@@ -4521,85 +4521,85 @@ input[type="button"].btn-block {
   }
 }
 
-.card-group {
+.BrowseCard-group {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.card-group > .card {
+.BrowseCard-group > .BrowseCard {
   margin-bottom: 15px;
 }
 
 @media (min-width: 576px) {
-  .card-group {
+  .BrowseCard-group {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
   }
-  .card-group > .card {
+  .BrowseCard-group > .BrowseCard {
     -ms-flex: 1 0 0%;
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card {
+  .BrowseCard-group > .BrowseCard + .BrowseCard {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:first-child {
+  .BrowseCard-group > .BrowseCard:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:first-child .card-img-top,
-  .card-group > .card:first-child .card-header {
+  .BrowseCard-group > .BrowseCard:first-child .BrowseCard-img-top,
+  .BrowseCard-group > .BrowseCard:first-child .BrowseCard-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:first-child .card-img-bottom,
-  .card-group > .card:first-child .card-footer {
+  .BrowseCard-group > .BrowseCard:first-child .BrowseCard-img-bottom,
+  .BrowseCard-group > .BrowseCard:first-child .BrowseCard-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:last-child {
+  .BrowseCard-group > .BrowseCard:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:last-child .card-img-top,
-  .card-group > .card:last-child .card-header {
+  .BrowseCard-group > .BrowseCard:last-child .BrowseCard-img-top,
+  .BrowseCard-group > .BrowseCard:last-child .BrowseCard-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:last-child .card-img-bottom,
-  .card-group > .card:last-child .card-footer {
+  .BrowseCard-group > .BrowseCard:last-child .BrowseCard-img-bottom,
+  .BrowseCard-group > .BrowseCard:last-child .BrowseCard-footer {
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:only-child {
+  .BrowseCard-group > .BrowseCard:only-child {
     border-radius: 0.25rem;
   }
-  .card-group > .card:only-child .card-img-top,
-  .card-group > .card:only-child .card-header {
+  .BrowseCard-group > .BrowseCard:only-child .BrowseCard-img-top,
+  .BrowseCard-group > .BrowseCard:only-child .BrowseCard-header {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
-  .card-group > .card:only-child .card-img-bottom,
-  .card-group > .card:only-child .card-footer {
+  .BrowseCard-group > .BrowseCard:only-child .BrowseCard-img-bottom,
+  .BrowseCard-group > .BrowseCard:only-child .BrowseCard-footer {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
   }
-  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) {
+  .BrowseCard-group > .BrowseCard:not(:first-child):not(:last-child):not(:only-child) {
     border-radius: 0;
   }
-  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-img-top,
-  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom,
-  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-header,
-  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-footer {
+  .BrowseCard-group > .BrowseCard:not(:first-child):not(:last-child):not(:only-child) .BrowseCard-img-top,
+  .BrowseCard-group > .BrowseCard:not(:first-child):not(:last-child):not(:only-child) .BrowseCard-img-bottom,
+  .BrowseCard-group > .BrowseCard:not(:first-child):not(:last-child):not(:only-child) .BrowseCard-header,
+  .BrowseCard-group > .BrowseCard:not(:first-child):not(:last-child):not(:only-child) .BrowseCard-footer {
     border-radius: 0;
   }
 }
 
-.card-columns .card {
+.BrowseCard-columns .BrowseCard {
   margin-bottom: 0.75rem;
 }
 
 @media (min-width: 576px) {
-  .card-columns {
+  .BrowseCard-columns {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
@@ -4609,28 +4609,28 @@ input[type="button"].btn-block {
     orphans: 1;
     widows: 1;
   }
-  .card-columns .card {
+  .BrowseCard-columns .BrowseCard {
     display: inline-block;
     width: 100%;
   }
 }
 
-.accordion .card:not(:first-of-type):not(:last-of-type) {
+.accordion .BrowseCard:not(:first-of-type):not(:last-of-type) {
   border-bottom: 0;
   border-radius: 0;
 }
 
-.accordion .card:not(:first-of-type) .card-header:first-child {
+.accordion .BrowseCard:not(:first-of-type) .BrowseCard-header:first-child {
   border-radius: 0;
 }
 
-.accordion .card:first-of-type {
+.accordion .BrowseCard:first-of-type {
   border-bottom: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.accordion .card:last-of-type {
+.accordion .BrowseCard:last-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

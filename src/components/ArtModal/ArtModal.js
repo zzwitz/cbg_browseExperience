@@ -51,25 +51,25 @@ class ArtModal extends React.Component {
       var emailButtonStyles = {display: 'none'}
     }
     return(
-        <div style = {modalStyles}  id = {this.props.artObj.id} class = 'ArtModalScreen'>
+        <div style = {modalStyles}  id = {this.props.cardObj.id} class = 'ArtModalScreen'>
           <div class = 'ArtModal'>
             <div ref = {node => this.node = node}  onClick = {this.handleXClick} class = "ArtModalClose"> &times; </div>
             <div class = 'ArtModalContent'>
               <div class = 'ArtModalLeft'>
-                <h4>{this.props.artObj.title}</h4>
-                <span class = "Italics"> by <Link to = {makeArtistLink(this.props.artObj.artistId)}> {this.props.artObj.artist}</Link></span>
+                <h4>{this.props.cardObj.title}</h4>
+                <span class = "Italics"> by <Link to = {makeArtistLink(this.props.cardObj.artistId)}> {this.props.cardObj.artist}</Link></span>
                 <br/> <hr/> <br/>
-                <span> {this.props.artObj.desc} </span>
+                <span> {this.props.cardObj.desc} </span>
                 <br/> <br/>
-                <span class = 'SizeText'> Width: {this.props.artObj.width} <br/> Height: {this.props.artObj.height}</span>
+                <span class = 'SizeText'> Width: {this.props.cardObj.width} <br/> Height: {this.props.cardObj.height}</span>
                 <br/> <br/>
                 </div>
               <div class = 'ArtModalRight'>
-                <img class = "ArtModalImg" src = {this.props.artObj.imgSRC}/>
+                <img class = "ArtModalImg" src = {this.props.cardObj.imgSRC}/>
               </div>
             </div>
               <div class = 'ArtModalEmail'>
-                <span style = {emailStyles}> Email: {this.props.artObj.artistEmail} </span>
+                <span style = {emailStyles}> Email: {this.props.cardObj.artistEmail} </span>
                 <button  style = {emailButtonStyles} onClick = {this.viewEmailButton} class = "button-std ArtModal" href = '/register'>View Email</button>
               </div>
           </div>

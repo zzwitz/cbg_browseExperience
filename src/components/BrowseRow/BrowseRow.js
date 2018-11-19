@@ -1,6 +1,6 @@
 import React from 'react';
 import './BrowseRow.css'
-import ArtCard from '../ArtCard/ArtCard.js'
+import BrowseCard from '../BrowseCard/BrowseCard.js'
 import ArtModal from '../ArtModal/ArtModal.js'
 
 
@@ -18,12 +18,12 @@ class BrowseRow extends React.Component {
 };
     return(
       <div style = {styles} class = "BrowseRowContainer">
-        <h3 class = "BrowseRowTitle"> Your Suggestions </h3>
+        <h3 class = "BrowseRowTitle"> {this.props.sectionTitle}</h3>
         <div class = "BrowseRow">
-          {this.props.artList.map(artPiece => (
-            <ArtCard handleClick = {this.props.handleClick} artObj = {artPiece}/>
+          {this.props.cardList.map(cardObj => (
+            <BrowseCard handleClick = {this.props.handleClick} cardObj = {cardObj}/>
           ))}
-          
+
         </div>
       </div>
     )

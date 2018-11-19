@@ -37,7 +37,7 @@ class BrowseSidebarSection extends React.Component {
 class BrowseSidebar extends React.Component {
     render() {
       return(        <div class = 'BrowseSidebarContainer'>
-      {this.props.sections.map(section => (
+      {this.props.sectionList.map(section => (
         <BrowseSidebarSection sectionTitle = {section.title} catList = {section.catList}/>
     ))}
               </div>)

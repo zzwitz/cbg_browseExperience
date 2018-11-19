@@ -56,7 +56,8 @@ var artList = [
   desc: "Ab veniam vidisse cohaerescant, consequat instituendarum ex arbitror hic enim mentitum officia, ingeniis comprehenderit non appellat, o incididunt te consequat ex ut summis non veniam, export pariatur in sint aute do non veniam summis nisi mentitum. Possumus philosophari ubi consequat. Mandaremus anim singulis qui voluptate do dolor cupidatat.",
   width: 50,
   height: 10,
-  artistEmail: 'da@vinceezy.com'
+  artistEmail: 'da@vinceezy.com',
+  type: 'Art'
   },
   {title: "Adam david",
   artist: 'Da Vinci',
@@ -66,7 +67,8 @@ var artList = [
   desc: "Ab veniam vidisse cohaerescant, consequat instituendarum ex arbitror hic enim mentitum officia, ingeniis comprehenderit non appellat, o incididunt te consequat ex ut summis non veniam, exporAb veniam vidisse cohaerescant, consequat instituendarum ex arbitror hic enim mentitum officia, ingeniis comprehenderit non appellat, o incididunt te consequat ex ut summis non veniam, export pariatur in sint aute do non veniam summis nisi mentitum. Possumus philosophari ubi consequat. Mandaremus anim singulis qui voluptate do dolor cupidatat.",
   width: 50,
   height: 10,
-  artistEmail: 'da@vinceezy.com'
+  artistEmail: 'da@vinceezy.com',
+  type: 'Art'
   },
   {title: "React",
   artist: 'Da Vinci',
@@ -76,7 +78,8 @@ var artList = [
   desc: "Ab veniam vidisse cohaerescant, consequat instituendarum ex arbitror hic enim mentitum officia, ingeniis comprehenderit non appellat, o incididunt te consequat ex ut summis non veniam, export pariatur in sint aute do non veniam summis nisi mentitum. Possumus philosophari ubi consequat. Mandaremus anim singulis qui voluptate do dolor cupidatat.",
   width: 50,
   height: 10,
-  artistEmail: 'da@vinceezy.com'
+  artistEmail: 'da@vinceezy.com',
+  type: 'Art'
 },
   {title: "Logo",
   artist: 'Da Vinci',
@@ -86,7 +89,8 @@ var artList = [
   desc: "Ab veniam vidisse cohaerescant, consequat instituendarum ex arbitror hic enim mentitum officia, ingeniis comprehenderit non appellat, o incididunt te consequat ex ut summis non veniam, export pariatur in sint aute do non veniam summis nisi mentitum. Possumus philosophari ubi consequat. Mandaremus anim singulis qui voluptate do dolor cupidatat.",
   width: 50,
   height: 10,
-  artistEmail: 'da@vinceezy.com'
+  artistEmail: 'da@vinceezy.com',
+  type: 'Art'
   },
   {title: "Mona Lisa",
   artist: 'Da Vinci',
@@ -96,7 +100,8 @@ var artList = [
   desc: "Ab veniam vidisse cohaerescant, consequat instituendarum ex arbitror hic enim mentitum officia, ingeniis comprehenderit non appellat, o incididunt te consequat ex ut summis non veniam, export pariatur in sint aute do non veniam summis nisi mentitum. Possumus philosophari ubi consequat. Mandaremus anim singulis qui voluptate do dolor cupidatat.",
   width: 50,
   height: 10,
-  artistEmail: 'da@vinceezy.com'
+  artistEmail: 'da@vinceezy.com',
+  type: 'Art'
   },
   {title: "Mona Lisa",
   artist: 'Da Vinci',
@@ -106,13 +111,72 @@ var artList = [
   desc: "Ab veniam vidisse cohaerescant, consequat instituendarum ex arbitror hic enim mentitum officia, ingeniis comprehenderit non appellat, o incididunt te consequat ex ut summis non veniam, export pariatur in sint aute do non veniam summis nisi mentitum. Possumus philosophari ubi consequat. Mandaremus anim singulis qui voluptate do dolor cupidatat.",
   width: 50,
   height: 10,
-  artistEmail: 'da@vinceezy.com'
+  artistEmail: 'da@vinceezy.com',
+  type: 'Art'
 }
 ]
 
-function getArtList() {
-  return artList
+var catList = [
+  {title: "Photos",
+  id: '1',
+  imgSRC: "cam.jpeg",
+  type: 'Category'
+  },
+  {title: "Photos",
+  id: '1',
+  imgSRC: "cam.jpeg",
+  type: 'Category'
+  },
+  {title: "Photos",
+  id: '1',
+  imgSRC: "cam.jpeg",
+  type: 'Category'
+},
+  {title: "Photos",
+  id: '1',
+  imgSRC: "cam.jpeg",
+  type: 'Category'
+  },
+  {title: "Photos",
+  id: '1',
+  imgSRC: "cam.jpeg",
+  type: 'Category'
+  },
+  {title: "Photos",
+  id: '1',
+  imgSRC: "cam.jpeg",
+  type: 'Category'
 }
+]
+
+
+function getSectionObj() {
+  return([
+    {
+      rowColor:  "inherit",
+      title: 'Your Suggestions',
+      artList: artList
+    },
+    {
+      rowColor:  "#F0EAD6",
+      title: 'Categories',
+      artList: catList.concat(catList)
+    },
+    {
+      rowColor:  "inherit",
+      title: 'Most Popular',
+      artList:  artList
+    },
+    {
+      rowColor:  "inherit",
+      title: 'Photographs',
+      artList: artList
+    }])
+};
+
+function getSidebar() {
+  return([sectionOne, sectionTwo])
+};
 
 class BrowseDiv extends React.Component {
   render() {
@@ -120,10 +184,10 @@ class BrowseDiv extends React.Component {
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-2">
-            <BrowseSidebar sections = {[sectionOne, sectionTwo]}/>
+            <BrowseSidebar sectionList = {getSidebar()}/>
           </div>
           <div class="col-md-10">
-            <BrowseBoard artList = {getArtList()}/>
+            <BrowseBoard sectionList = {getSectionObj()}/>
           </div>
         </div>
       </div>

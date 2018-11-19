@@ -5,7 +5,8 @@
 }
 
 
-.ArtCard {
+.BrowseCard {
+  background-color: inherit;
   pointer-events: visibleFill;
   width: 150px;
   height: 225px;
@@ -16,7 +17,7 @@
   /* text-align: center; */
 }
 
-.ArtCard {
+.BrowseCard {
   cursor: pointer;
 }
 
@@ -31,7 +32,7 @@ a:hover {
 }
 
 
-.CardContainer {
+.BrowseCardContainer {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
@@ -41,7 +42,7 @@ a:hover {
   vertical-align: top;
 }
 
-.CardText {
+.BrowseCardText {
   font-size: 18px;
   margin: auto;
   display: inline-block;
@@ -51,12 +52,12 @@ a:hover {
   height: 150px;
 }
 
-.CardTitle:hover {
+.BrowseCardTitle:hover {
    text-decoration: underline;
    color: inherit;
 }
 
-.ArtCard:hover {
+.BrowseCard:hover {
   /* box-shadow: 2px 2px 2px Grey; */
   border: 1px solid #6C5A49;
 }
@@ -65,7 +66,7 @@ a:hover {
   font-size: 12px;
 }
 
-.CardImage {
+.BrowseCardImage {
   display: block;
   width: 100px;
   height: 100px;
